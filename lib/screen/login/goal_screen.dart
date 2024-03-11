@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healtho_gym/common/color_extension.dart';
 import 'package:healtho_gym/common_widget/round_button.dart';
+import 'package:healtho_gym/screen/home/setting/setting_screen.dart';
 
 class GoalScreen extends StatefulWidget {
   const GoalScreen({super.key});
@@ -56,7 +57,9 @@ class _GoalScreenState extends State<GoalScreen> {
               const SizedBox(
                 height: 20,
               ),
-              RoundButton(title: "DONE", isPadding: false, onPressed: () {}),
+              RoundButton(title: "DONE", isPadding: false, onPressed: () {
+                context.push(const SettingScreen());
+              }),
               const Spacer()
             ],
           ),
