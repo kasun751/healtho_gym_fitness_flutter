@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healtho_gym/common/color_extension.dart';
+import 'package:healtho_gym/screen/home/notification/notification_screen.dart';
+import 'package:healtho_gym/screen/home/reminder/reminder_screen.dart';
 import 'package:healtho_gym/screen/home/setting/profile_screen.dart';
 import 'package:healtho_gym/screen/home/setting/setting_row.dart';
 
@@ -51,7 +53,9 @@ class _SettingScreenState extends State<SettingScreen> {
               title: "Notification",
               icon: "assets/img/notification.png",
               value: "On",
-              onPressed: () {}),
+              onPressed: () {
+                context.push(const NotificationScreen());
+              }),
           SettingRow(
               title: "Refer a Friend",
               icon: "assets/img/share.png",
@@ -67,6 +71,13 @@ class _SettingScreenState extends State<SettingScreen> {
               icon: "assets/img/rating.png",
               value: "",
               onPressed: () {}),
+          SettingRow(
+              title: "Reminder",
+              icon: "assets/img/rating.png",
+              value: "",
+              onPressed: () {
+                context.push(const ReminderScreen());
+              }),
           SettingRow(
               title: "Log Out",
               icon: "assets/img/logout.png",
