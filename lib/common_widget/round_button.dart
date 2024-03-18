@@ -12,6 +12,7 @@ class RoundButton extends StatelessWidget {
   final double width;
   final String? image;
   final bool isPadding;
+  final double radius;
   final VoidCallback onPressed;
   const RoundButton(
       {super.key,
@@ -19,6 +20,7 @@ class RoundButton extends StatelessWidget {
       this.type = RoundButtonType.primary,
       this.height = 50,
       this.fontSize = 14,
+      this.radius = 25,
       this.fontWeight = FontWeight.w600,
       this.width = double.maxFinite,
       this.isPadding = true,
@@ -39,7 +41,7 @@ class RoundButton extends StatelessWidget {
             border: type == RoundButtonType.line
                 ? Border.all(color: TColor.board)
                 : null,
-            borderRadius: BorderRadius.circular(25)),
+            borderRadius: BorderRadius.circular(radius)),
         height: height,
         child: Row(
           children: [
