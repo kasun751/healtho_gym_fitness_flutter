@@ -3,6 +3,7 @@ import 'package:healtho_gym/common/color_extension.dart';
 import 'package:healtho_gym/common_widget/top_tab_button.dart';
 import 'package:healtho_gym/screen/home/top_tab_view/exercises/exercises_tab_screen.dart';
 import 'package:healtho_gym/screen/home/top_tab_view/health_tip/health_tip_screen.dart';
+import 'package:healtho_gym/screen/home/top_tab_view/workout_plan/workout_plan_screen.dart';
 
 class TopTabViewScreen extends StatefulWidget {
   const TopTabViewScreen({super.key});
@@ -92,7 +93,7 @@ class _TopTabViewScreenState extends State<TopTabViewScreen>
               children: [
                 const HealthTipScreen(),
                 const ExercisesScreen(),
-                Container(),
+                const WorkoutPlanScreen(),
                 Container(),
                 Container(),
                 Container(),

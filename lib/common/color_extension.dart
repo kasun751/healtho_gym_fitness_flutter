@@ -10,6 +10,7 @@ class TColor {
   static Color get btnSecondaryText => const Color(0xff241111);
   static Color get board => const Color(0xffD4D4D4);
   static Color get txtBG => const Color(0xffFCFBFB);
+  static Color get btnBG => const Color(0xffF0F0F3);
   static Color get inactive => primaryText.withOpacity(0.2);
   static Color get placeholder => const Color(0xff94A5A6);
 }

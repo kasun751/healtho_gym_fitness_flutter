@@ -5,6 +5,7 @@ class RoundTextField extends StatelessWidget {
   final String hintText;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
+  final double radius;
   final bool obscureText;
   final Widget? right;
   final bool isPadding;
@@ -14,6 +15,7 @@ class RoundTextField extends StatelessWidget {
     required this.hintText,
     this.controller,
     this.keyboardType,
+    this.radius = 25,
     this.obscureText = false,
     this.right,
     this.isPadding = false,
@@ -27,7 +29,7 @@ class RoundTextField extends StatelessWidget {
       decoration: BoxDecoration(
           color: TColor.txtBG,
           border: Border.all(color: TColor.board, width: 1),
-          borderRadius: BorderRadius.circular(25)),
+          borderRadius: BorderRadius.circular(radius)),
       child: TextField(
         controller: controller,
         keyboardType: keyboardType,
