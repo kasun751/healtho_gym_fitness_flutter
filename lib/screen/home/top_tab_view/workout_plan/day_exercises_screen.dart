@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healtho_gym/common/color_extension.dart';
 import 'package:healtho_gym/common_widget/day_exercises_row.dart';
+import 'package:healtho_gym/screen/home/top_tab_view/workout_plan/workout_exercises_screen.dart';
 
 class DayExercisesScreen extends StatefulWidget {
   const DayExercisesScreen({super.key});
@@ -91,16 +92,21 @@ class _DayExercisesScreenState extends State<DayExercisesScreen> {
         ],
       ),
       body: ListView.separated(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-          itemBuilder: (context, index) {
-            var obj = listArr[index] as Map? ?? {};
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        itemBuilder: (context, index) {
+          var obj = listArr[index] as Map? ?? {};
 
-            return DayExerciseRow(obj: obj, onPressed: () {});
-          },
-          separatorBuilder: (context, index) => const SizedBox(
-                height: 20,
-              ),
-          itemCount: listArr.length),
+          return DayExerciseRow(
+              obj: obj,
+              onPressed: () {
+                context.push(const WorkoutExercisesDetailScreen());
+              });
+        },
+        separatorBuilder: (context, index) => const SizedBox(
+          height: 20,
+        ),
+        itemCount: listArr.length,
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:healtho_gym/common/color_extension.dart';
 import 'package:healtho_gym/screen/home/top_tab_view/exercises/exercises_row.dart';
 import 'package:healtho_gym/screen/home/top_tab_view/health_tip/health_tip_row.dart';
+import 'package:healtho_gym/screen/home/top_tab_view/workout_plan/workout_exercises_screen.dart';
 
 class ExercisesNameScreen extends StatefulWidget {
   const ExercisesNameScreen({super.key});
@@ -65,7 +66,10 @@ class _ExercisesNameScreenState extends State<ExercisesNameScreen> {
                       icon: Container(
                         width: 50,
                         alignment: Alignment.center,
-                        child: Image.asset("assets/img/down_white.png", width: 15, ),
+                        child: Image.asset(
+                          "assets/img/down_white.png",
+                          width: 15,
+                        ),
                       ),
                       hint: const Text(
                         "Select Level",
@@ -98,7 +102,9 @@ class _ExercisesNameScreenState extends State<ExercisesNameScreen> {
                   var obj = listArr[index] as Map? ?? {};
                   return ExercisesRow(
                     obj: obj,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(const WorkoutExercisesDetailScreen());
+                    },
                   );
                 },
                 separatorBuilder: (context, index) => const SizedBox(

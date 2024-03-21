@@ -10,6 +10,7 @@ class DayExerciseRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
           color: TColor.txtBG,

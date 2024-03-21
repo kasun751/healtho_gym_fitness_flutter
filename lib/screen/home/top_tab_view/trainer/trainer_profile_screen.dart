@@ -5,7 +5,8 @@ import 'package:healtho_gym/common_widget/title_subtitle_button.dart';
 import 'package:healtho_gym/screen/home/setting/setting_row.dart';
 
 class TrainerProfileScreen extends StatefulWidget {
-  const TrainerProfileScreen({super.key});
+  final bool isTrainer;
+  const TrainerProfileScreen({super.key, this.isTrainer = true});
 
   @override
   State<TrainerProfileScreen> createState() => _TrainerProfileScreenState();
@@ -272,7 +273,9 @@ class _TrainerProfileScreenState extends State<TrainerProfileScreen> {
               subtitle: "ISSA 2019",
               onPressed: () {}),
           TitleSubtitleButton(
-              title: "Personal Training Client and Feedback",
+              title: widget.isTrainer
+                  ? "Personal Training Client and Feedback"
+                  : "Feedback",
               subtitle: "Strict, Calm in Nature",
               onPressed: () {}),
         ],
