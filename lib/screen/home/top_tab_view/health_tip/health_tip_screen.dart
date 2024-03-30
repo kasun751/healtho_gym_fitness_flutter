@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:healtho_gym/common/color_extension.dart';
+import 'package:healtho_gym/screen/home/top_tab_view/health_tip/health_tip_details_screen.dart';
 import 'package:healtho_gym/screen/home/top_tab_view/health_tip/health_tip_row.dart';
 
 class HealthTipScreen extends StatefulWidget {
@@ -39,7 +41,9 @@ class _HealthTipScreenState extends State<HealthTipScreen> {
             var obj = listArr[index] as Map? ?? {};
             return HealthTipRow(
               obj: obj,
-              onPressed: () {},
+              onPressed: () {
+                context.push(const HealthTipDetailScreen());
+              },
             );
           },
           separatorBuilder: (context, index) => const SizedBox(
