@@ -62,7 +62,7 @@ class TrainerRow extends StatelessWidget {
                       width: 150,
                       child: IgnorePointer(
                         ignoring: true,
-                        child: RatingBar.builder(
+                        child: RatingBar.builder( //
                           initialRating: obj["rate"],
                           minRating: 1,
                           direction: Axis.horizontal,
@@ -78,7 +78,7 @@ class TrainerRow extends StatelessWidget {
                           onRatingUpdate: (rating) {
                             print(rating);
                           },
-                        ),
+                        ), //
                       ),
                     ),
                     const Spacer(),

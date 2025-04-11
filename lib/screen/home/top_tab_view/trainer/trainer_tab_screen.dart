@@ -71,9 +71,9 @@ class _TrainerTabScreenState extends State<TrainerTabScreen> {
           vertical: 20,
         ),
         itemBuilder: (context, index) {
-          return TrainerRow(obj: listArr[index], onPressed: (){
+          return TrainerRow(obj: listArr[index], onPressed: (){ //
             context.push(const TrainerProfileScreen());
-          },);
+          },); //
         },
         separatorBuilder: (context, index) => const SizedBox(
           height: 15,
